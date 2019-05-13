@@ -7,12 +7,12 @@ Making Object Detection & Deep Learning Easy on Raspberry Pis using Pico
 
 
 
-### What is Pico all about?
+## What is Pico all about?
 
 Pico is very young project which is targeted at object detection and analytics using Docker containers running on tiny Raspberry Pi boxes. It is used to search motion generated images for face matches by leveraging AWS Rekognition. In its current state, matches are wrote to event.log. With some additional creativity and work, you could send out a notification or allow/deny access to a room with minimal changes. The install script will place the appropriate files in /etc/rc.local to start on boot.  
 
 
-# What Technologies does Pic uses?
+## What Technologies does Pic uses?
 
 - Apache Kafka
 - Docker
@@ -21,7 +21,7 @@ Pico is very young project which is targeted at object detection and analytics u
 
 <TBD>
 
-### Setting up Pico
+## Setting up Pico
 
 - Buy Raspberry Pi (Tested with Rpi 3) 
 - Buy Heat Sink(Optional)
@@ -33,7 +33,7 @@ Pico is very young project which is targeted at object detection and analytics u
 As an alternative, this set of scripts can be modified to watch any directory that contains images. For example, if you collect still images from another camera and save them to disk, you can alter the image path to run facial recognition against any new photo that is created.
 
 
-### Installing Raspbian OS
+## Installing Raspbian OS
 
 Setup a Raspberry Pi with Raspbian Jessie <br />
 https://www.raspberrypi.org/downloads/raspbian/ <br />
