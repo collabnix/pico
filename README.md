@@ -4,14 +4,12 @@ Object Detection & Deep Learning on Raspberry Pi using Pico
 
 ![alt text](https://github.com/collabnix/pico/blob/master/pico-logo.png)
 
-# Flipper
-
-Object Detection & Deep Learning Made Simple using Docker containers on Raspberry Pi
 
 
-### Description
 
-Flipper is very young project which is targeted at object detection and analytics using Docker containers running on tiny Raspberry Pi boxes. It is used  to search motion generated images for face matches by leveraging AWS Rekognition. In its current state, matches are wrote to event.log. With some additional creativity and work, you could send out a notification or allow/deny access to a room with minimal changes. The install script will place the appropriate files in /etc/rc.local to start on boot.  
+### What is Pico all about?
+
+Pico is very young project which is targeted at object detection and analytics using Docker containers running on tiny Raspberry Pi boxes. It is used  to search motion generated images for face matches by leveraging AWS Rekognition. In its current state, matches are wrote to event.log. With some additional creativity and work, you could send out a notification or allow/deny access to a room with minimal changes. The install script will place the appropriate files in /etc/rc.local to start on boot.  
 
 ### Setting up Pico
 
@@ -109,8 +107,8 @@ pi_object_detection.py            tf-opencv
 ### Clone this repo and install:<br />
 
 ```
-root@node2:~# git clone https://github.com/collabnix/flipper
-Cloning into 'flipper'...
+root@node2:~# git clone https://github.com/collabnix/pico
+Cloning into 'pico'...
 remote: Enumerating objects: 156, done.
 remote: Total 156 (delta 0), reused 0 (delta 0), pack-reused 156
 Receiving objects: 100% (156/156), 27.45 KiB | 0 bytes/s, done.
@@ -118,8 +116,8 @@ Resolving deltas: 100% (69/69), done.
 ```
 
 ```
-root@node2:~/flipper/scripts# chmod +x install.sh
-root@node2:~/flipper/scripts# ./install.sh
+root@node2:~/pico/scripts# chmod +x install.sh
+root@node2:~/pico/scripts# ./install.sh
 ```
 
 ### Getting started
@@ -127,21 +125,21 @@ root@node2:~/flipper/scripts# ./install.sh
 First, you need to create a new collection on AWS Rekognition. Creating a 'home' collection would look like:
 
 ```
-cd flipper/scripts<br />
+cd pico/scripts<br />
 python add_collection.py -n 'home'<br />
 ```
 
-Next, add your images to the flipper/faces folder. The more images of a person the better results you will get for detection. I would recommend several different poses in different lighting.
+Next, add your images to the pico/faces folder. The more images of a person the better results you will get for detection. I would recommend several different poses in different lighting.
 
 ```
-cd flipper/faces<br />
+cd pico/faces<br />
 python ../scripts/add_image.py -i 'image.jpg' -c 'home' -l 'Tom'<br />
 ```
 
-I found the best results by taking a photo in the same area that the camera will be placed, and by using the picam. If you want to do this, I created a small python script to take a photo with a 10 second delay and then puts it into the flipper/faces folder. To use it:
+I found the best results by taking a photo in the same area that the camera will be placed, and by using the picam. If you want to do this, I created a small python script to take a photo with a 10 second delay and then puts it into the pico/faces folder. To use it:
 
 ```
-cd flipper/scripts<br />
+cd pico/scripts<br />
 python take_selfie.py<br />
 ```
 
@@ -149,7 +147,7 @@ Once complete, you can go back and rename the file and repeat the steps above to
 
 ## To delete a face from your collection, use the following:
 
-```cd flipper/scripts<br />
+```cd pico/scripts<br />
 python del_faces.py -i '000-000-000-000' -c 'home'<br />
 ```
 
@@ -158,7 +156,7 @@ If you need to find the image id or a collection name, reference your faces.txt 
 ## To remove a collection:
 
 ```
-cd flipper/scripts<br />
+cd pico/scripts<br />
 python del_collections.py -c 'home'<br />
 ```
 
@@ -167,7 +165,7 @@ Note that the above will also delete all the faces you have stored in AWS.
 The last script is facematch.py. If you have images updated and just want to test static photos against the faces you have stored on AWS, do the following:
 
 ```
-cd flipper/scripts<br />
+cd pico/scripts<br />
 python facematch.py -i 'tom.jpg' -c 'home'<br />
 ```
 
