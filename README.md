@@ -9,10 +9,15 @@ Making Object Detection & Deep Learning Easy on Raspberry Pis using Pico
 
 ### What is Pico all about?
 
-Pico is very young project which is targeted at object detection and analytics using Docker containers running on tiny Raspberry Pi boxes. It is used  to search motion generated images for face matches by leveraging AWS Rekognition. In its current state, matches are wrote to event.log. With some additional creativity and work, you could send out a notification or allow/deny access to a room with minimal changes. The install script will place the appropriate files in /etc/rc.local to start on boot.  
+Pico is very young project which is targeted at object detection and analytics using Docker containers running on tiny Raspberry Pi boxes. It is used to search motion generated images for face matches by leveraging AWS Rekognition. In its current state, matches are wrote to event.log. With some additional creativity and work, you could send out a notification or allow/deny access to a room with minimal changes. The install script will place the appropriate files in /etc/rc.local to start on boot.  
 
 
-# How does Pico works?
+# What Technologies does Pic uses?
+
+- Apache Kafka
+- Docker
+- Docker Swarm
+- AWS Rekognition Service
 
 <TBD>
 
