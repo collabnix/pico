@@ -1,4 +1,4 @@
-# pico
+# Pico
 
 Making Object Detection & Deep Learning Easy on Raspberry Pis using Pico
 
