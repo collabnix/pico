@@ -1,6 +1,6 @@
 # pico
 
-Object Detection & Deep Learning on Raspberry Pi using Pico
+Making Object Detection & Deep Learning Easy on Raspberry Pis using Pico
 
 ![alt text](https://github.com/collabnix/pico/blob/master/pico-logo.png)
 
