@@ -2,7 +2,7 @@
 
 Deep Learning Made Easy using Raspberry Pi, Apache Kafka & Docker
 
-![alt text](https://github.com/collabnix/pico/blob/master/pico-logo.png)
+![alt text](https://github.com/collabnix/pico/blob/master/thepicoproject1.png)
 
 
 
