@@ -1,4 +1,4 @@
-# Pico
+# The Pico Project
 
 Deep Learning Made Easy using Raspberry Pi, Apache Kafka, AWS Rekognition & Docker
 
