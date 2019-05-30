@@ -1,6 +1,6 @@
 # Pico
 
-Deep Learning Made Easy using Raspberry Pi, Apache Kafka & Docker
+Deep Learning Made Easy using Raspberry Pi, Apache Kafka, AWS Rekognition & Docker
 
 ![alt text](https://github.com/collabnix/pico/blob/master/thepicoproject1.png)
 
