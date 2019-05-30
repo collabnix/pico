@@ -1,6 +1,6 @@
 # Pico
 
-Making Object Detection & Deep Learning Easy on Raspberry Pis using containerized Apache Kafka & AWS Rekognition Service
+Deep Learning Made Easy using Raspberry Pi, Apache Kafka & Docker
 
 ![alt text](https://github.com/collabnix/pico/blob/master/pico-logo.png)
 
