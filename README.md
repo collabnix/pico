@@ -21,7 +21,13 @@ Pico is a beta project which is targeted at object detection and analytics using
 
 <TBD>
 
-## Setting up Pico
+## Getting Started
+
+[ Turn Your Raspberry Pi into CCTV Camera](http://collabnix.com/turn-your-raspberry-pi-into-low-cost-cctv-surveillance-camerawith-night-vision-in-5-minutes-using-docker/) 
+
+[How to Deploy Apache Kafka on AWS Platform using Docker Swarm Mode?](http://collabnix.com/implementing-apache-kafka-on-docker-swarm-running-on-aws-platform-in-5-minutes/)
+
+## To-do Lists
 
 - Buy Raspberry Pi (Tested with Rpi 3) 
 - Buy Heat Sink(Optional)
