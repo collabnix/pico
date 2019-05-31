@@ -14,6 +14,8 @@ Pico is a beta project which is targeted at object detection and analytics using
 
 ## What Technologies does Pico uses?
 
+![alt text](https://github.com/collabnix/pico/blob/master/images/image-9.png)
+
 - [Apache Kafka](http://collabnix.com/implementing-apache-kafka-on-docker-swarm-running-on-aws-platform-in-5-minutes/)
 - Docker
 - Docker Swarm
