@@ -35,7 +35,7 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 
 [How to Deploy Apache Kafka on AWS Platform using Docker Swarm Mode?](http://collabnix.com/implementing-apache-kafka-on-docker-swarm-running-on-aws-platform-in-5-minutes/)
 
-## To-do Lists
+## Preparing Your Environment
 
 - Buy Raspberry Pi (Tested with Rpi 3) 
 - Buy Heat Sink(Optional)
