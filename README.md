@@ -39,9 +39,9 @@ Stage I - [ Turn Your Raspberry Pi into CCTV Camera](http://collabnix.com/turn-y
 
 Stage II - [How to Deploy Apache Kafka on AWS Platform using Docker Swarm Mode?](http://collabnix.com/implementing-apache-kafka-on-docker-swarm-running-on-aws-platform-in-5-minutes/)
 
-Stage III - Pushing the video frame from Raspberry Pi to Apache Kafka - <TBD>
+Stage III - Pushing the video frame from Raspberry Pi to Apache Kafka - TBD
   
-Stage IV - <TBD>
+Stage IV - TBD
 
 ## Preparing Your Environment
 
