@@ -52,9 +52,9 @@ Stage IV - TBD
 - Raspberry Pi 3 Model B 4-layer Dog Bone Stack Clear Case Box Enclosure 
 - AWS Rekognition Access (Free tier) 
 
+## Getting Started
+
+- [Preparing Your Raspberry Pi Cluster](https://github.com/collabnix/pico/blob/master/getting-started/README.md)
 
 
-As an alternative, this set of scripts can be modified to watch any directory that contains images. For example, if you collect still images from another camera and save them to disk, you can alter the image path to run facial recognition against any new photo that is created.
 
-
-#
