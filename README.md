@@ -8,6 +8,8 @@ Object Detection and Analysis Made easy using Raspberry Pi, Apache Kafka, AWS Re
 
 ## What is Pico Project all about?
 
+![alt text](https://github.com/collabnix/pico/blob/master/images/arch_pico.png)
+
 Imagine you are able to capture live video streams, identify objects using deep learning, and then trigger actions or notifications based on the identified objects - all using Docker containers. With Pico, you will be able to setup and run a live video capture, analysis, and alerting solution prototype.
 
 A camera surveils a particular area, streaming video over the network to a video capture client. The client samples video frames and sends them over to AWS, where they are analyzed and stored along with metadata. If certain objects are detected in the analyzed video frames, SMS alerts are sent out. Once a person receives an SMS alert, they will likely want to know what caused it. For that, sampled video frames can be monitored with low latency using a web-based user interface.
