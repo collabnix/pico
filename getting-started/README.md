@@ -1,4 +1,4 @@
-# Installing Raspbian OS
+# Installing Raspbian OS on Raspberry Pi
 
 Setup a Raspberry Pi with Raspbian Jessie <br />
 https://www.raspberrypi.org/downloads/raspbian/ <br />
