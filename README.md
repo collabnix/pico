@@ -1,6 +1,6 @@
 # The Pico Project
 
-Object Detection and Analysis Made easy using Raspberry Pi, Apache Kafka, AWS Rekognition & Docker
+Object Detection and Analysis Made Simple using Raspberry Pi, Apache Kafka, AWS Rekognition & Docker
 
 ![alt text](https://github.com/collabnix/pico/blob/master/thepicoproject1.png)
 
