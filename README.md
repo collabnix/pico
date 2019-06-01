@@ -36,6 +36,7 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 
 ## Preparing Your Environment
 
+![alt text](https://github.com/collabnix/pico/blob/master/images/rasp_cluster.jpg)
 - Buy Raspberry Pi (Tested with Rpi 3) 
 - Buy Heat Sink(Optional)
 - Buy Pi Camera Module 
