@@ -31,7 +31,15 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 - Docker Swarm
 - AWS Rekognition Service
 
-<TBD>
+## Why Kafka when AWS Kinesis cater the need?
+
+- Kafka is amazingly fast.  
+- Quite easy to operate & simple to configure.
+- Vey low memory and CPU footprint.
+- Stable
+- Provides you DIY capability
+
+
 
 
 ## Preparing Your Environment
