@@ -4,7 +4,9 @@ services:
   zkui:
     image: qnib/plain-zkui@sha256:30c4aa1236ee90e4274a9059a5fa87de2ee778d9bfa3cb48c4c9aafe7cfa1a13
     ports:
-      - "19090:9090"
+      - "9090:9090"
+    environment: 
+      ZKUI_ZK_SERVER=[192.168.0.26:12181,192.168.0.26:22181,192.168.0.26:32181] 
   zookeeper-1:
     image: confluentinc/cp-zookeeper:latest
     hostname: zookeeper-1
