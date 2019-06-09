@@ -50,12 +50,17 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 | Raspberry Pi Infrared IR Night Vision Surveillance Camera Module 500W Webcam | [Buy](https://robu.in/product/raspberry-pi-infrared-ir-night-vision-surveillance-camera-module-500w-webcam/ref/60/) | ![Buy](https://github.com/collabnix/pico/blob/master/images/picbox2.png/)| 
 
 
+Optional:
 
-- Buy Heat Sink(Optional)
-- Buy Pi Camera Module 
-- Buy Pi camera Tripod Stand(Optional)
+- Buy Heat Sink
+- Buy Pi camera Tripod Stand
 - Raspberry Pi 3 Model B 4-layer Dog Bone Stack Clear Case Box Enclosure 
-- AWS Rekognition Access (Free tier) 
+
+AWS Tool Required:
+
+- AWS Rekognition Access (No Free Tier due to Kafka broker minimal requirement of t2.medium size instances)
+- AWS Lambda
+- AWS S3 Bucket
 
 ## View of Raspberry Pi Stack
 
