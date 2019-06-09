@@ -121,3 +121,7 @@ cd pico/kafka
 docker stack deploy -c docker-compose.yml mykafka
 ```
 
+By now, you should be able to access kafka manager at https://<IP>:9000
+    
+[Next >> Pushing a Sample Video to Kafka Cluster using python script]()
+
