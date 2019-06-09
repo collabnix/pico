@@ -2,7 +2,7 @@
 
 Object Detection & Analysis Made Simple using Raspberry Pi, Apache Kafka, AWS Rekognition & Docker
 
-![alt text](https://github.com/collabnix/pico/blob/master/thepicoproject1.png)
+![alt text](https://github.com/collabnix/pico/blob/master/images/thepicoproject1.png)
 
 
 
