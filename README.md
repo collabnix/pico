@@ -46,7 +46,7 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 
 | Topic        | Presentation          | Video  |
 | ------------- |:-------------:| -----:|
-| Raspberry Pi 3 Model B| [Buy](https://robu.in/product/latest-raspberry-pi-3-model-b-original/) | [ - ]() |
+| Raspberry Pi 3 Model B| [Buy](https://robu.in/product/latest-raspberry-pi-3-model-b-original/) | [Buy](https://github.com/collabnix/pico/blob/master/images/pibox.png) |
 | What's New in Docker 19.03.0 Pre-Release| [Slides](-)| [ - ]()| 
 | -|[Slides](-)| [ - ]() | 
 
