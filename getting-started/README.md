@@ -1,5 +1,3 @@
-# Installing Raspbian OS on Raspberry Pi
-
 # How to install Docker 18.09.0 on Raspberry Pi 3
 
 
