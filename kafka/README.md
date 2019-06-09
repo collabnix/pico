@@ -142,5 +142,5 @@ which gives an even spread of the topic across the three kafka nodes.
 
 While saving the settings, it might ask to set minimal parameter required. Feel free to follow the instruction provided.
     
-[Next >> Pushing a Sample Video to Kafka Cluster using python script]()
+[Next >> Pushing a Sample Video to Kafka Cluster using python script](https://github.com/collabnix/pico/blob/master/kafka/producer-consumer.md)
 
