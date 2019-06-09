@@ -90,7 +90,9 @@ def publish_video(video_file):
   python consumer.py
   ```
   
+  ## Verifying the Video Streaming
   
+  By now you can browse through http://<Instance-IP>:5000 to see video streaming.
 
 
 
