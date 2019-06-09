@@ -5,6 +5,8 @@
 - Apache Kafka Cluster Setup - Follow [this](https://github.com/collabnix/pico/blob/master/kafka/README.md)
 - Create an instance outside Kafka Cluster with Docker binaries installed
 
+## Setting up Environment for Producer Script
+
 ## Pulling the Container
 
 ```
@@ -29,7 +31,7 @@ cd pico/kafka/
 
 Two entries needed to be changed:
 - topic name(which you must have supplied during the initial Kafka cluster configuration)
-- bootstrapper server IP pointing to your 
+- bootstrapper server IP pointing to your Kafka Broker
 
 ```
 import sys
@@ -73,6 +75,19 @@ def publish_video(video_file):
   
   ```
   python producer.py
+  ```
+  
+  ## Setting up Environment for Consumer Script
+  
+  Open up consumer script and modify the two important items:
+  
+  - Topic Name: testpico
+  - Bootstrap Server: <IP>:9093
+    
+  Executing the Script
+  
+  ```
+  python consumer.py
   ```
   
   
