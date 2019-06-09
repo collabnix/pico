@@ -38,7 +38,7 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 - Vey low memory and CPU footprint.
 - Stable
 - Provides you DIY capability
-
+- Open Source
 
 
 
