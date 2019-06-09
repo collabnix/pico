@@ -16,7 +16,7 @@ def publish_video(video_file):
     :param video_file: path to video file <string>
     """
     # Start up producer
-    producer = KafkaProducer(bootstrap_servers='35.189.155.32:9092')
+    producer = KafkaProducer(bootstrap_servers='ip172-18-0-22-bju5ui1lhjkg00an8dp0-9092.direct.labs.play-with-docker.com')
 
     # Open file
     video = cv2.VideoCapture(video_file)
@@ -49,7 +49,7 @@ def publish_camera():
     """
 
     # Start up producer
-    producer = KafkaProducer(bootstrap_servers='35.189.155.32:9092')
+    producer = KafkaProducer(bootstrap_servers='ip172-18-0-22-bju5ui1lhjkg00an8dp0-9092.direct.labs.play-with-docker.com')
 
     
     camera = cv2.VideoCapture(0)
