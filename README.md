@@ -66,7 +66,7 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 Stage I - [Installing Docker on Raspberry Pi](https://github.com/collabnix/pico/tree/master/getting-started)<br>
 Stage II - [Turn Your Raspberry Pi into Night survillience Camera using Docker]()<br>
 Stage III -  [Deploy Apache Kafka on AWS Platform using Docker Swarm](https://github.com/collabnix/pico/blob/master/kafka/README.md)<br>
-Stage IV- [Pushing the video frame from Raspberry Pi to Apache Kafka[() -WIP<br>
+Stage IV - [Pushing the video frame from Raspberry Pi to Apache Kafka[() -WIP<br>
 Stage IV - []() - TBD<br>
 
 
