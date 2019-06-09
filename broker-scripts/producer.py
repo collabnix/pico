@@ -6,7 +6,7 @@ import cv2
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
-topic = "videotopic"
+topic = "testpico"
 
 def publish_video(video_file):
     """
