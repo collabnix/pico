@@ -3,11 +3,11 @@ from flask import Flask, Response, render_template
 from kafka import KafkaConsumer
 
 # Fire up the Kafka Consumer
-topic = "videotopic"
+topic = "testpico"
 
 consumer = KafkaConsumer(
     topic, 
-    bootstrap_servers=['localhost:9092'])
+    bootstrap_servers=['localhost:9093'])
 
 
 # Set the consumer in a Flask App
