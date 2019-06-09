@@ -44,11 +44,11 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 
 ## Preparing Your Environment
 
-| Topic        | Presentation          | Video  |
+|Items        |   Link        | Reference  |
 | ------------- |:-------------:| -----:|
-| Raspberry Pi 3 Model B| [Buy](https://robu.in/product/latest-raspberry-pi-3-model-b-original/) | [Buy](https://github.com/collabnix/pico/blob/master/images/pibox.png) |
-| What's New in Docker 19.03.0 Pre-Release| [Slides](-)| [ - ]()| 
-| -|[Slides](-)| [ - ]() | 
+| Raspberry Pi 3 Model B| [Buy](https://robu.in/product/latest-raspberry-pi-3-model-b-original/) | ![Buy](https://github.com/collabnix/pico/blob/master/images/pibox.png) |
+| Raspberry Pi Infrared IR Night Vision Surveillance Camera Module 500W Webcam | [Buy](https://robu.in/product/raspberry-pi-infrared-ir-night-vision-surveillance-camera-module-500w-webcam/) | ![Buy](https://robu.in/product/raspberry-pi-infrared-ir-night-vision-surveillance-camera-module-500w-webcam/)| 
+
 
 ![alt text](https://github.com/collabnix/pico/blob/master/images/rasp_cluster.jpg)
 - Buy Raspberry Pi (Tested with Rpi 3) 
