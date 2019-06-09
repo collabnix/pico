@@ -1,89 +1,73 @@
-version: '2'
-services:
+version: '3.4'
 
-  zkui:
-    image: qnib/plain-zkui@sha256:30c4aa1236ee90e4274a9059a5fa87de2ee778d9bfa3cb48c4c9aafe7cfa1a13
-    ports:
-      - "9090:9090"
-    environment: 
-      ZKUI_ZK_SERVER=[192.168.0.26:12181,192.168.0.26:22181,192.168.0.26:32181] 
-  zookeeper-1:
-    image: confluentinc/cp-zookeeper:latest
-    hostname: zookeeper-1
-    ports:
-      - "12181:12181"
+services:
+  zk-1: &zk
+    image: confluentinc/cp-zookeeper:4.0.0
+    env_file:
+      - zk-common.env
     environment:
       ZOOKEEPER_SERVER_ID: 1
-      ZOOKEEPER_CLIENT_PORT: 12181
-      ZOOKEEPER_TICK_TIME: 2000
-      ZOOKEEPER_INIT_LIMIT: 5
-      ZOOKEEPER_SYNC_LIMIT: 2
-      ZOOKEEPER_SERVERS: zookeeper-1:12888:13888;zookeeper-2:22888:23888;zookeeper-3:32888:33888
-
-  zookeeper-2:
-    image: confluentinc/cp-zookeeper:latest
-    hostname: zookeeper-2
-    ports:
-      - "22181:22181"
+      ZOOKEEPER_SERVERS: 0.0.0.0:2888:3888;zk-2:2888:3888;zk-3:2888:3888
+    volumes:
+      - zk-1:/var/lib/zookeeper/data
+  zk-2:
+    <<: *zk
     environment:
       ZOOKEEPER_SERVER_ID: 2
-      ZOOKEEPER_CLIENT_PORT: 22181
-      ZOOKEEPER_TICK_TIME: 2000
-      ZOOKEEPER_INIT_LIMIT: 5
-      ZOOKEEPER_SYNC_LIMIT: 2
-      ZOOKEEPER_SERVERS: zookeeper-1:12888:13888;zookeeper-2:22888:23888;zookeeper-3:32888:33888
-
-  zookeeper-3:
-    image: confluentinc/cp-zookeeper:latest
-    hostname: zookeeper-3
-    ports:
-      - "32181:32181"
+      ZOOKEEPER_SERVERS: zk-1:2888:3888;0.0.0.0:2888:3888;zk-3:2888:3888
+    volumes:
+      - zk-2:/var/lib/zookeeper/data
+  zk-3:
+    <<: *zk
     environment:
       ZOOKEEPER_SERVER_ID: 3
-      ZOOKEEPER_CLIENT_PORT: 32181
-      ZOOKEEPER_TICK_TIME: 2000
-      ZOOKEEPER_INIT_LIMIT: 5
-      ZOOKEEPER_SYNC_LIMIT: 2
-      ZOOKEEPER_SERVERS: zookeeper-1:12888:13888;zookeeper-2:22888:23888;zookeeper-3:32888:33888
+      ZOOKEEPER_SERVERS: zk-1:2888:3888;zk-2:2888:3888;0.0.0.0:2888:3888
+    volumes:
+      - zk-3:/var/lib/zookeeper/data
 
-  kafka-1:
-    image: confluentinc/cp-kafka:latest
-    hostname: kafka-1
-    ports:
-      - "19092:19092"
-    depends_on:
-      - zookeeper-1
-      - zookeeper-2
-      - zookeeper-3
+  kafka-1: &kafka
+    image: confluentinc/cp-kafka:4.0.0
+    env_file:
+      - kafka-common.env
     environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:12181,zookeeper-2:12181,zookeeper-3:12181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-1:19092
- 
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-1:9192,EXTERNAL://localhost:9092
+      KAFKA_JMX_HOSTNAME: kafka-1
+    ports:
+      - 9092:9092
+    volumes:
+      - kafka-1:/var/lib/kafka/data
   kafka-2:
-    image: confluentinc/cp-kafka:latest
-    hostname: kafka-2
-    ports:
-      - "29092:29092"
-    depends_on:
-      - zookeeper-1
-      - zookeeper-2
-      - zookeeper-3
+    <<: *kafka
     environment:
-      KAFKA_BROKER_ID: 2
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:12181,zookeeper-2:12181,zookeeper-3:12181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-2:29092
- 
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-2:9192,EXTERNAL://localhost:9093
+      KAFKA_JMX_HOSTNAME: kafka-2
+    ports:
+      - 9093:9092
+    volumes:
+      - kafka-2:/var/lib/kafka/data
   kafka-3:
-    image: confluentinc/cp-kafka:latest
-    hostname: kafka-3
-    ports:
-      - "39092:39092"
-    depends_on:
-      - zookeeper-1
-      - zookeeper-2
-      - zookeeper-3
+    <<: *kafka
     environment:
-      KAFKA_BROKER_ID: 3
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:12181,zookeeper-2:12181,zookeeper-3:12181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-3:39092
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka-3:9192,EXTERNAL://localhost:9094
+      KAFKA_JMX_HOSTNAME: kafka-3
+    ports:
+      - 9094:9092
+    volumes:
+      - kafka-3:/var/lib/kafka/data
+
+  kafka-manager:
+    image: sheepkiller/kafka-manager
+    environment:
+      ZK_HOSTS: zk-1:2181,zk-2:2181,zk-3:2181
+      JMX_PORT: 9181
+      APPLICATION_SECRET: letmein
+    ports:
+      - 9000:9000
+
+volumes:
+  zk-1:
+  zk-2:
+  zk-3:
+  kafka-1:
+  kafka-2:
+  kafka-3:

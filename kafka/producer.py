@@ -1,11 +1,12 @@
 import sys
 import time
 import cv2
-from picamera.array import PiRGBArray
-from picamera import PiCamera
+# from picamera.array import PiRGBArray
+# from picamera import PiCamera
 from kafka import KafkaProducer
+from kafka.errors import KafkaError
 
-topic = "distributed-video1"
+topic = "testpico"
 
 def publish_video(video_file):
     """
@@ -15,7 +16,7 @@ def publish_video(video_file):
     :param video_file: path to video file <string>
     """
     # Start up producer
-    producer = KafkaProducer(bootstrap_servers='localhost:9092')
+    producer = KafkaProducer(bootstrap_servers='10.140.0.2:9092')
 
     # Open file
     video = cv2.VideoCapture(video_file)
@@ -48,7 +49,7 @@ def publish_camera():
     """
 
     # Start up producer
-    producer = KafkaProducer(bootstrap_servers='localhost:9092')
+    producer = KafkaProducer(bootstrap_servers='10.140.0.2:9092')
 
     
     camera = cv2.VideoCapture(0)
@@ -58,10 +59,12 @@ def publish_camera():
         
             ret, buffer = cv2.imencode('.jpg', frame)
             producer.send(topic, buffer.tobytes())
-            
+            image.write(buffer.tobytes())
+    
+    
             # Choppier stream, reduced load on processor
             time.sleep(0.2)
-
+            
     except:
         print("\nExiting.")
         sys.exit(1)
@@ -69,15 +72,6 @@ def publish_camera():
     
     camera.release()
 
-
-if __name__ == '__main__':
-    """
-    Producer will publish to Kafka Server a video file given as a system arg. 
-    Otherwise it will default by streaming webcam feed.
-    """
-    if(len(sys.argv) > 1):
-        video_path = sys.argv[1]
-        publish_video(video_path)
-    else:
-        print("publishing feed!")
-        publish_camera()
+	
+	
+publish_video('Countdown1.mp4')
