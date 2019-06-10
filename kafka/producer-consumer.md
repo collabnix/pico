@@ -10,7 +10,7 @@
 ## Pulling the Container
 
 ```
-docker pull https://github.com/ajeetraina/opencv4-python3
+docker pull ajeetraina/opencv4-python3
 ```
 
 ## Running the container exposing port 5000
