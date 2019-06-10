@@ -20,12 +20,16 @@ docker run -itd -p 5000:5000 ajeetraina/opencv4-python3 bash
 docker attach <container-id>
 ```
 
+
+
 ## Cloning the Repository
 
 ```
 git clone https://github.com/collabnix/pico
 cd pico/kafka/
 ```
+
+If in case it reports that pico already exists, remove it first and then try the above command. I still need to package it properly.
 
 ## Modify the producer
 
