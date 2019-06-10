@@ -1,5 +1,5 @@
 FROM python:3.7
-MAINTAINER Ajeet Singh Raina <ajeetraina@gmail.com>
+
 
 RUN apt-get update \
     && apt-get install -y \
