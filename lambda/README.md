@@ -89,6 +89,38 @@ zip -g function.zip function.py
 
 # Testing it with Lambda
 
+## Pre-requisite:
+
+- aws.amazon.com
+- Click on Services > Lambda
+
+## Steps:
+
+- Open AWS Lambda Page
+- Click on "Create Funtion"
+- Select "Author from Scratch"
+- Enter Function name of your Choice
+- Choose "Python 3.6" as Runtime
+- Click on "Create Function"
+
+You should see the message "Congratulations! Your Lambda function "kafka-pico-lambda" has been successfully created. You can now change its code and configuration. Choose Test to input a test event when you want to test your function."
+
+Under the function code, select "Upload as zip file" and upload function.zip. Select Python 3.6 as Runtime and handler as function.lambda_handler.
+
+
 ![alt text](https://github.com/collabnix/pico/blob/master/lambda/Screen%20Shot%202019-07-01%20at%203.32.15%20PM.png)
+
+Click on Save.
+
+## Triggering the Consumer Code
+
+Go to any one of your Kafka container(say, kafka-1) and run the below command:
+
+
 ![alt text](https://github.com/collabnix/pico/blob/master/lambda/Screen%20Shot%202019-07-01%20at%203.31.58%20PM.png)
+
+## Troubleshooting: 
+
+- If it displays "Unable to import Kafka module" then possibly you have missed out the above steps. Go back and start from the beginner in building the zip file.
+- If in case timedout error appear, please increase the timed-out value to 3-4 minutes.
 
