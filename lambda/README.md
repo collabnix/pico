@@ -116,6 +116,14 @@ Click on Save.
 
 Go to any one of your Kafka container(say, kafka-1) and run the below command:
 
+```
+kafka-console-producer --broker-list kafka:9092 --topic aws-lambda-topic 
+```
+ and enter some text randomly.
+ Say, I typed dharwad for example.
+ 
+ Go back to Lambda and Click on Test. You should be able to see dharwad as output as shown below:
+
 
 ![alt text](https://github.com/collabnix/pico/blob/master/lambda/Screen%20Shot%202019-07-01%20at%203.31.58%20PM.png)
 
