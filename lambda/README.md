@@ -132,7 +132,6 @@ kafka-console-producer --broker-list kafka-1:9092 --topic aws-lambda-topic
 ![alt text](https://github.com/collabnix/pico/blob/master/lambda/Screen%20Shot%202019-07-01%20at%203.31.58%20PM.png)
 
 ## Troubleshooting: 
-
-- If it displays "Unable to import Kafka module" then possibly you have missed out the above steps. Go back and start from the beginner in building the zip file.
+- If it displays "Unable to import Kafka module" then possibly you have missed out the above steps. Go back and start from the beginning in building the zip file.
 - If in case timedout error appear, please increase the timed-out value to 3-4 minutes.
 
