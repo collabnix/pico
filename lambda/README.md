@@ -1,5 +1,5 @@
 
-# Preparing AWS Lambda Deployment Package in Python for Apache Kafka & Testing it on AWS Lambda 
+# Preparing AWS Lambda Deployment Package in Python & Testing Kafka Connect AWS Lambda Connector
 
 A deployment package is a ZIP archive that contains your function code and dependencies. You need to create a deployment package if you use the Lambda API to manage functions, or if you need to include libraries and dependencies other than the AWS SDK. You can upload the package directly to Lambda, or you can use an Amazon S3 bucket, and then upload it to Lambda. If the deployment package is larger than 50 MB, you must use Amazon S3.
 
