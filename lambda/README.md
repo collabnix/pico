@@ -89,7 +89,7 @@ zip -g function.zip function.py
 
 # Testing it with Lambda
 
-![alt text]()
-![alt text]()
+![alt text](./Screen Shot 2019-07-01 at 3.31.58 PM.png)
+![alt text](./Screen Shot 2019-07-01 at 3.31.58 PM.png)
 ![alt text]()
 
