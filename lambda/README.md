@@ -87,7 +87,7 @@ Add [function.py](https://github.com/collabnix/pico/blob/master/lambda/function.
 zip -g function.zip function.py
 ```
 
-# Testing it with Lambda
+# Testing Kafka Connect AWS Lambda Connector
 
 ## Pre-requisite:
 
