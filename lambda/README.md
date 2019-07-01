@@ -89,7 +89,7 @@ zip -g function.zip function.py
 
 # Testing it with Lambda
 
-![alt text](./Screen Shot 2019-07-01 at 3.31.58 PM.png)
+![alt text](https://github.com/collabnix/pico/blob/master/lambda/Screen%20Shot%202019-07-01%20at%203.31.58%20PM.png)
 ![alt text](./Screen Shot 2019-07-01 at 3.31.58 PM.png)
 ![alt text]()
 
