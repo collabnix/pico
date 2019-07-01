@@ -80,6 +80,8 @@ cd $OLDPWD
 
 ## Add your function code to the archive
 
+Add [function.py](https://github.com/collabnix/pico/blob/master/lambda/function.py) here under the same directory
+
 ```
 zip -g function.zip function.py
 ```
