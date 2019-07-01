@@ -10,6 +10,7 @@ Let us try out a simple example to build Kafka Module and package it in the form
 
 - Docker Desktop for Mac
 - Python 3.6 
+- Kafka Cluster running on http://35.189.130.4:9000/
 
 ## Using a Virtual Environment
 
@@ -86,4 +87,9 @@ Add [function.py](https://github.com/collabnix/pico/blob/master/lambda/function.
 zip -g function.zip function.py
 ```
 
+# Testing it with Lambda
+
+![alt text]()
+![alt text]()
+![alt text]()
 
