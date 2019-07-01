@@ -117,7 +117,11 @@ Click on Save.
 Go to any one of your Kafka container(say, kafka-1) and run the below command:
 
 ```
-kafka-console-producer --broker-list kafka:9092 --topic aws-lambda-topic 
+docker exec -it kafka-1 bash
+```
+
+```
+kafka-console-producer --broker-list kafka-1:9092 --topic aws-lambda-topic 
 ```
  and enter some text randomly.
  Say, I typed dharwad for example.
