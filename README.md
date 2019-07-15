@@ -71,7 +71,7 @@ AWS Tool Required:
 ## Getting Started
 
 Stage I - [Installing Docker on Raspberry Pi](https://github.com/collabnix/pico/tree/master/getting-started)<br>
-Stage II - [Turn Your Raspberry Pi into Night survillience Camera using Docker]()<br>
+Stage II - [Turn Your Raspberry Pi into Night survillience Camera using Docker](http://collabnix.com/turn-your-raspberry-pi-into-low-cost-cctv-surveillance-camerawith-night-vision-in-5-minutes-using-docker/)<br>
 Stage III -  [Deploy Apache Kafka on AWS Platform using Docker Swarm](https://github.com/collabnix/pico/blob/master/kafka/README.md)<br>
 Stage IV - [Pushing the video frame from Raspberry Pi to Apache Kafka](https://github.com/collabnix/pico/blob/master/kafka/producer-consumer.md) <br>
 Stage IV - []() - [Preparing AWS Lambda Deployment Package in Python & Testing Kafka Connect AWS Lambda Connector](https://github.com/collabnix/pico/blob/master/lambda/README.md)<br>
