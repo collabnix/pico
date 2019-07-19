@@ -46,7 +46,7 @@ def publish_camera():
         
             ret, buffer = cv2.imencode('.jpg', frame)
             
-            camera_data['image_bytes'] = str(buffer.tobytes())
+            camera_data['image_bytes'] = base64.b64encode(buffer).decode('utf-8')
             camera_data['frame'] = str(i)
 #             producer.send(topic,buffer.tobytes())
             
