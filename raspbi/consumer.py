@@ -1,4 +1,6 @@
 import datetime
+import json
+import base64
 from flask import Flask, Response, render_template
 from kafka import KafkaConsumer
 
@@ -37,7 +39,7 @@ def get_video_stream():
     """
     for msg in consumer:
         yield (b'--frame\r\n'
-               b'Content-Type: image/jpg\r\n\r\n' + msg.value['image_bytes'] + b'\r\n\r\n')
+               b'Content-Type: image/jpg\r\n\r\n' + base64.b64decode(msg.value['image_bytes']) + b'\r\n\r\n')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
