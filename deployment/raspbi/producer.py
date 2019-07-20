@@ -82,8 +82,7 @@ def publish_camera():
             # Choppier stream, reduced load on processor
             time.sleep(0.2)
             
-            if framecount==20:
-                break
+            
             
     except Exception as e:
         print((e))
