@@ -1,7 +1,7 @@
 FROM ajeetraina/opencv-python3-armv7
 MAINTAINER Ajeet S Raina "ajeetraina@gmail.com"
 
-RUN apt install python-opencv
+RUN apt install -y libopencv-dev python-opencv
 RUN git clone https://github.com/collabnix/pico && \
      cd pico/deployment/raspbi
 WORKDIR /pico/deployment/raspbi
