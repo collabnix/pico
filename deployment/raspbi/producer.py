@@ -20,7 +20,7 @@ from kafka import KafkaProducer
 from kafka.errors import KafkaError
 import base64 
 
-topic = "testpico"
+topic = "camera1"
 brokers = ["35.189.130.4:9092"]
 
 
