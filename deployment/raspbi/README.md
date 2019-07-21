@@ -16,6 +16,8 @@ git clone https://github.com/collabnix/pico/
 cd pico/deployment/raspbi
 ```
 
+## Modifying the Camera ID:1,2,3 respectively
+
 ## Building Docker Image
 
 ```
