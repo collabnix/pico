@@ -9,27 +9,21 @@
 sudo modprobe bcm2835-v4l2
 ```
 
-## Method #1 - The "Undocker Way"
-
-Install these below packages manually
-
+## Cloning the Repository
 
 ```
-pip3 install opencv-python
-sudo apt-get install libatlas-base-dev
-sudo apt-get install libjasper-dev
-sudo apt-get install libqtgui4
-sudo apt-get install python3-pyqt5
-apt-get install libqt4-test
-pip3 install kafka-python
-pip3 install pytz
+git clone https://github.com/collabnix/pico/
+cd pico/deployment/raspbi
 ```
 
-## Initiate the producer script
-
-Before you initiate, modify the camera ID on each of these camera modules, tagged with IP.
-Say, your node IP is 192.168.1.6, mark the camera ID as "6"
+## Building Docker Image
 
 ```
-python3 producer.py
+docker build -t ajeetraina/pico-armv71
+```
+
+## Running the Container
+
+```
+docker run -d --privileged -v /dev/video0:/dev/video0 ajeetraina/pico-armv71
 ```
