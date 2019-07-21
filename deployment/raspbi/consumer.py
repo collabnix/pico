@@ -1,6 +1,8 @@
 import datetime
 from flask import Flask, Response, render_template
 from kafka import KafkaConsumer
+import json
+import base64
 
 # Fire up the Kafka Consumer
 camera_topic_1 = "camera1"
