@@ -3,11 +3,24 @@ from flask import Flask, Response, render_template
 from kafka import KafkaConsumer
 
 # Fire up the Kafka Consumer
-topic = "testpico"
+camera_topic_1 = "camera1"
+camera_topic_2 = "camera2"
+camera_topic_3 = "camera3"
 brokers = ["35.189.130.4:9092"]
 
-consumer = KafkaConsumer(
-    topic, 
+camera1 = KafkaConsumer(
+    camera_topic_1, 
+    bootstrap_servers=brokers,
+    value_deserializer=lambda m: json.loads(m.decode('utf-8')))
+
+camera2 = KafkaConsumer(
+    camera_topic_2, 
+    bootstrap_servers=brokers,
+    value_deserializer=lambda m: json.loads(m.decode('utf-8')))
+
+
+camera3 = KafkaConsumer(
+    camera_topic_3, 
     bootstrap_servers=brokers,
     value_deserializer=lambda m: json.loads(m.decode('utf-8')))
 
@@ -28,7 +41,7 @@ def camera_1():
     new values streaming through the pipeline.
     """
     return Response(
-        get_video_stream(id), 
+        getCamera1(), 
         mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/camera_2', methods=['GET'])
@@ -40,7 +53,7 @@ def camera_2():
     new values streaming through the pipeline.
     """
     return Response(
-        get_video_stream(id), 
+        getCamera2(), 
         mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
@@ -53,18 +66,36 @@ def camera_3():
     new values streaming through the pipeline.
     """
     return Response(
-        get_video_stream(id), 
+        getCamera3(), 
         mimetype='multipart/x-mixed-replace; boundary=frame')
 
-def get_video_stream(id):
+def getCamera1():
     """
     Here is where we recieve streamed images from the Kafka Server and convert 
     them to a Flask-readable format.
     """
-    for msg in consumer:
-        if str(msg.value['camera_id']) == str(id):
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpg\r\n\r\n' + base64.b64decode(msg.value['image_bytes']) + b'\r\n\r\n')
+    for msg in camera1:
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpg\r\n\r\n' + base64.b64decode(msg.value['image_bytes']) + b'\r\n\r\n')
 
+def getCamera2():
+    """
+    Here is where we recieve streamed images from the Kafka Server and convert 
+    them to a Flask-readable format.
+    """
+    for msg in camera2:
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpg\r\n\r\n' + base64.b64decode(msg.value['image_bytes']) + b'\r\n\r\n')
+            
+            
+ def getCamera3():
+    """
+    Here is where we recieve streamed images from the Kafka Server and convert 
+    them to a Flask-readable format.
+    """
+    for msg in camera3:
+       yield (b'--frame\r\n'
+              b'Content-Type: image/jpg\r\n\r\n' + base64.b64decode(msg.value['image_bytes']) + b'\r\n\r\n')           
+            
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
