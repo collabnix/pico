@@ -23,8 +23,8 @@ consumer = KafkaConsumer(
 # In[18]:
 
 
-session = boto3.session.Session(aws_access_key_id='AKIAJ3WBH33FZON66E7A',
-                                aws_secret_access_key='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',
+session = boto3.session.Session(aws_access_key_id='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+                                aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
                                 region_name='us-west-2')
 
 
