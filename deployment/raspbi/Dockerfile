@@ -1,8 +1,11 @@
-FROM ajeetraina/opencv-python3-armv7
-MAINTAINER Ajeet S Raina "ajeetraina@gmail.com"
+FROM collabnix/rpi-raspbian-opencv
+MAINTAINER Ajeet S Raina "ajeetraina@gmail.c
 
-RUN apt install -y libopencv-dev python-opencv
-RUN git clone https://github.com/collabnix/pico && \
-     cd pico/deployment/raspbi
-WORKDIR /pico/deployment/raspbi
-ENTRYPOINT [ "python3", "producer.py" ]
+RUN apt update -y
+RUN pip3 install pytz
+RUN pip3 install kafka-python
+RUN apt install -y git
+ADD . /pico/
+WORKDIR /pico/raspbi/
+RUN sudo modprobe bcm2835-v4l2
+ENTRYPOINT ["python3", "/pico/producer.py" ]
