@@ -6,4 +6,4 @@ RUN pip3 install kafka-python
 RUN apt install -y git
 ADD . /pico/
 WORKDIR /pico/
-ENTRYPOINT ["python3", "/pico/producer.py" ]
+ENTRYPOINT ["python3", "/pico/plates-producer.py" ]
