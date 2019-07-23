@@ -1,4 +1,4 @@
-FROM collabnix/rpi-raspbian-opencv
+FROM ajeetraina/rpi-raspbian-opencv
 MAINTAINER Ajeet S Raina "ajeetraina@gmail.c
 
 RUN apt update -y
