@@ -7,5 +7,4 @@ RUN pip3 install kafka-python
 RUN apt install -y git
 ADD . /pico/
 WORKDIR /pico/raspbi/
-RUN sudo modprobe bcm2835-v4l2
 ENTRYPOINT ["python3", "/pico/producer.py" ]
