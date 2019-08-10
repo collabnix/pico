@@ -21,7 +21,7 @@ from kafka.errors import KafkaError
 import base64
 
 topic = "image-pool"
-brokers = ["35.189.130.4:9092"]
+brokers = ["35.221.215.135:9092"]
 
 camera_data = {'camera_id':'1',
                'position':'frontspace',
@@ -81,7 +81,7 @@ def publish_camera():
             framecount = framecount + 1
 
             # Choppier stream, reduced load on processor
-            time.sleep(0.02)
+            time.sleep(0.002)
 
 
     except Exception as e:
@@ -100,4 +100,22 @@ def publish_camera():
 
 if __name__ == "__main__":
     publish_camera()
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 

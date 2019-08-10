@@ -25,14 +25,15 @@ from copy import deepcopy
 from PIL import Image, ImageDraw, ExifTags, ImageColor, ImageFont
 
 import datetime
-from kafka import KafkaConsumer
+from kafka import KafkaConsumer, KafkaProducer
 import boto3
 import json
-import base64 
+import base64
+import io
 
 # Fire up the Kafka Consumer
 topic = "image-pool"
-brokers = ["35.189.130.4:9092"]
+brokers = ["35.221.215.135:9092"]
 
 consumer = KafkaConsumer(
     topic, 
@@ -46,8 +47,8 @@ producer = KafkaProducer(bootstrap_servers=brokers,
                             value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 
 
-AWS_ACCESS_KEY_ID = 'XXXXXXXXXXXXXXXXXXXXXXXXX'
-AWS_SECRET_ACCESS_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXX'
+AWS_ACCESS_KEY_ID = 'XXXXXXXXXXXXXXXXXXXXXXXXXX'
+AWS_SECRET_ACCESS_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXX'
 
 
 session = boto3.session.Session(aws_access_key_id = AWS_ACCESS_KEY_ID,
@@ -118,38 +119,52 @@ def start_processor():
 
                         objects.append(label['Name'])
 
-                        confidence.append(label['Confidence']))   
+                        confidence.append(label['Confidence'])  
 
 
         for i, box in enumerate(boxes):
 
-        top = box[0]
-        left = box[1]
-        width = box[2]
-        height = box[3]
+            top = box[0]
+            left = box[1]
+            width = box[2]
+            height = box[3]
 
 
-        points = (
-                    (left,top),
-                    (left + width, top),
-                    (left + width, top + height),
-                    (left , top + height),
-                    (left, top)
+            points = (
+                        (left,top),
+                        (left + width, top),
+                        (left + width, top + height),
+                        (left , top + height),
+                        (left, top)
 
-                )
+                    )
 
-        font = ImageFont.truetype("arial.ttf", 25)
-        draw.line(points, fill='#00d400', width=3)
+            font = ImageFont.truetype("arial.ttf", 25)
+            draw.line(points, fill='#00d400', width=3)
 
-        label = str(objects[i])+":"+str(confidence[i])
-        color = 'rgb(255,255,0)' # white color
-        draw.text((left, top - 25), label, fill=color,font=font)
+            label = str(objects[i])+":"+str(confidence[i])
+            color = 'rgb(255,255,0)' # white color
+            draw.text((left, top - 25), label, fill=color,font=font)
 
-        camera_data['image_bytes'] = image.tobytes()
+            
+            imgByteArr = io.BytesIO()
+            image.save(imgByteArr, format=image.format)
+            imgByteArr = imgByteArr.getvalue()
+            
+            
+            camera_data['image_bytes'] = base64.b64encode(imgByteArr).decode('utf-8')
 
-        producer.send(camera_topic,camera_data)
+#             print(camera_topic)
+            
+            producer.send(camera_topic,camera_data)
         
 
 if __name__ == "__main__":
     start_processor()
+
+
+# In[ ]:
+
+
+
 
