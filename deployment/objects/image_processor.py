@@ -2,6 +2,8 @@
 # coding: utf-8
 
 # In[ ]:
+# Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2. 
+# OpenCV is a library of programming functions mainly aimed at real-time computer vision
 
 
 import boto3
