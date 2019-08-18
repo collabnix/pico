@@ -1,6 +1,6 @@
 # The Pico Project
 
-Object Detection/Deep Learning Made Simple using Pico
+Object Detection & Text Analytics Made Simple using Pico
 
 ![alt text](https://github.com/collabnix/pico/blob/master/images/thepicoproject1.png "My Image")
 
