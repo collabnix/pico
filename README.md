@@ -1,6 +1,6 @@
 # The Pico Project
 
-Object Detection & Text Analytics Made Simple using Docker, Raspberrt Pi, Apache Kafk & AWS Rekognition
+Object Detection/Deep Learning Made Simple using Pico
 
 ![alt text](https://github.com/collabnix/pico/blob/master/images/thepicoproject1.png "My Image")
 
@@ -22,25 +22,12 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 ![alt text](https://github.com/collabnix/pico/blob/master/images/pico_in_3_steps.png)
 
 
-## What Technologies does Pico uses?
+## Offerings
 
 ![alt text](https://github.com/collabnix/pico/blob/master/images/image-9.png)
 
-- Apache Kafka
-- Docker
-- Docker Swarm
-- AWS Rekognition Service
-
-## Why Apache Kafka & not AWS Kinesis?
-
-- Kafka is amazingly fast.  
-- Quite easy to operate & simple to configure.
-- Vey low memory and CPU footprint.
-- Stable
-- Provides you DIY capability
-- Open Source
-
-
+- Pico for AWS
+- Pico for On-Premises(Using Swarm & Kubernetes)
 
 ## Preparing Your Environment
 
