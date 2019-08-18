@@ -6,8 +6,7 @@ Object Detection/Deep Learning Made Simple using Pico
 
 
 
-## What is Pico Project all about?
-
+## What is Pico all about?
 
 
 Imagine you are able to capture live video streams, identify objects using deep learning, and then trigger actions or notifications based on the identified objects - all using Docker containers. With Pico, you will be able to setup and run a live video capture, analysis, and alerting solution prototype.
