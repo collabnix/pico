@@ -25,8 +25,6 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 
 ## Offerings
 
-![alt text](https://github.com/collabnix/pico/blob/master/images/image-9.png)
-
 - Pico for AWS
 - Pico for On-Premises(Using Swarm & Kubernetes)
 
