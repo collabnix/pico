@@ -37,24 +37,16 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 | 5MP Raspberry Pi 3 Camera Module W/ HBV FFC Cable | [Buy](https://robu.in/product/5mp-raspberry-pi-camera-module-w-hbv-ffc-cable/ref/60) | ![Buy](https://github.com/collabnix/pico/blob/master/images/pibox3.png)| 
 
 
-
-Optional:
-
-- Buy Heat Sink
-- Buy Pi camera Tripod Stand
-- Raspberry Pi 3 Model B 4-layer Dog Bone Stack Clear Case Box Enclosure 
-
-AWS Tool Required:
-
-- AWS Rekognition Access (No Free Tier due to Kafka broker minimal requirement of t2.medium size instances)
-- AWS Lambda
-- AWS S3 Bucket
-
 ## View of Raspberry Pi Stack
 
 ![alt text](https://github.com/collabnix/pico/blob/master/images/rasp_cluster.jpg)
 
-## Getting Started
+## Getting Started - An Easy Way
+
+<TBD>
+
+
+## Getting Started - The Hard Way
 
 Stage I - [Installing Docker on Raspberry Pi](https://github.com/collabnix/pico/tree/master/getting-started)<br>
 Stage II - [Turn Your Raspberry Pi into Night survillience Camera using Docker](http://collabnix.com/turn-your-raspberry-pi-into-low-cost-cctv-surveillance-camerawith-night-vision-in-5-minutes-using-docker/)<br>
