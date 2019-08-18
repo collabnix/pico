@@ -13,7 +13,7 @@ Imagine you are able to capture live video streams, identify objects using deep 
 
 ![alt text](https://github.com/collabnix/pico/blob/master/images/pico-project-arch.png)
 
-                               Pico for AWS
+                            
 
 A camera surveils a particular area, streaming video over the network to a video capture client. The client samples video frames and sends them over to AWS, where they are analyzed and stored along with metadata. If certain objects are detected in the analyzed video frames, SMS alerts are sent out. Once a person receives an SMS alert, they will likely want to know what caused it. For that, sampled video frames can be monitored with low latency using a web-based user interface.
 
