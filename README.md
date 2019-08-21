@@ -43,7 +43,39 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 
 ## Getting Started - An Easy Way
 
-<TBD>
+### Cloning the repository onto Raspberry Pi
+
+```
+git clone https://github.com/collabnix/pico
+cd pico/deployment/objects/
+```
+
+### Execute the producer 
+
+```
+python3 producer_camera.py
+```
+
+Keep it running.
+
+## Running Kafka on Swarm Cluster on AWS
+
+Please follow Stage-III as shown below for step by step
+
+## Running Image Processor Script(Run on any AWS instance)
+
+```
+docker pull ajeetraina/opencv4-python3
+```
+
+## Execute the Image Processor Script
+
+```
+nohup python3 image_processor.py
+nohup python3 consumer.py
+```
+
+
 
 
 ## Getting Started - The Hard Way
