@@ -96,6 +96,10 @@ nohup python3 image_processor.py
 nohup python3 consumer.py
 ```
 
+Sequence of the script should be:
+image_processor > consumer script > producer script
+
+Just place any object in front of camera module and it shall detect the object automatically with tagging about the object type.
 
 
 
