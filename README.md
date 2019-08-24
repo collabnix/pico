@@ -60,7 +60,26 @@ Keep it running.
 
 ## Running Kafka on Swarm Cluster on AWS
 
-Please follow Stage-III as shown below for step by step
+In order to run Kafka on AWS, you need t2.medium instances which doesn't fall under Free Tier. You will need to use your FREE credits or pay for its usage. Alternatively, for development purpose if you are not concerned about performance, you can use GCP instances.
+
+I assume that you have Docker and Docker Compose installed on one of AWS instance.
+
+### Cloning the Repository
+
+```
+git clone https://github.com/collabnix/pico
+cd pico/kafka
+```
+
+```
+docker-compose up -d
+```
+
+That's it. Your AWS KAfka cluster is up and running on a single node. For running Apache Kafka on Swarm Mode, refer [this link](https://github.com/collabnix/pico/blob/master/kafka/README.md)
+
+### Building up 
+
+### Cloning the Repository
 
 ## Running Image Processor Script(Run on any AWS instance)
 
