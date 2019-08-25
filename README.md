@@ -82,10 +82,9 @@ That's it. Your AWS KAfka cluster is up and running on a single node. For runnin
 
 ## Running Image Processor Script(Run on any AWS instance)
 
-```
+
 ```
 sudo docker run -it --privileged --device /dev/video0:/dev/video0 ajeetraina/pico-producer-rpi python3 consumer_camera.py
-```
 ```
 
 ## Execute the Consumer Script
