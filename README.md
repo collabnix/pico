@@ -43,22 +43,19 @@ The Pico framework uses Kafka cluster to acquire data in real-time. Kafka is a m
 
 # Getting Started 
 
-# Setting up Producer
-
-### Cloning the repository onto Raspberry Pi
+# Running Producer inside Docker Container
 
 ```
-git clone https://github.com/collabnix/pico
-cd pico/deployment/objects/
+sudo docker run -it --privileged --device /dev/video0:/dev/video0 ajeetraina/pico-producer-rpi python3 producer_camera.py
 ```
 
-### Execute the producer 
+# Verify that it is running fine
 
 ```
-python3 producer_camera.py
-```
+CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS               NAMES
+81891d992daf        ajeetraina/pico-producer-rpi   "/usr/bin/entry.sh p…"   9 minutes ago       Up 9 minutes                            jolly_dewdney
 
-Keep it running.
+```
 
 # Setting up Kafka Cluster on Cloud Platform
 
@@ -81,12 +78,14 @@ docker-compose up -d
 
 That's it. Your AWS KAfka cluster is up and running on a single node. For running Apache Kafka on Swarm Mode, refer [this link](https://github.com/collabnix/pico/blob/master/kafka/README.md)
 
-# Setting up Consumer
+# Running the Consumer Script
 
 ## Running Image Processor Script(Run on any AWS instance)
 
 ```
-docker pull ajeetraina/opencv4-python3
+```
+sudo docker run -it --privileged --device /dev/video0:/dev/video0 ajeetraina/pico-producer-rpi python3 consumer_camera.py
+```
 ```
 
 ## Execute the Consumer Script
