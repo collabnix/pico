@@ -12,7 +12,7 @@ import cv2
 import decimal
 from copy import deepcopy
 
-from __future__ import print_function
+#from __future__ import print_function
 import base64
 import datetime
 import time
