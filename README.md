@@ -63,7 +63,7 @@ CONTAINER ID        IMAGE                          COMMAND                  CREA
 
 In order to run Kafka on AWS, you need t2.medium instances which doesn't fall under Free Tier. You will need to use your FREE credits or pay for its usage. Alternatively, for development purpose if you are not concerned about performance, you can use GCP instances.
 
-I assume that you have Docker and Docker Compose installed on one of AWS instance.
+I assume that you have Docker and Docker Compose installed on multiple Swarm Mode Cluster
 
 ### Cloning the Repository
 
@@ -76,7 +76,7 @@ cd pico/kafka
 docker stack deploy -c docker-compose.yml mykafka
 ```
 
-That's it. Your AWS KAfka cluster is up and running on Docker Swarm Nodes. For running Apache Kafka on Swarm Mode, refer [this link](https://github.com/collabnix/pico/blob/master/kafka/README.md)
+That's it. Your AWS KAfka cluster is up and running on Docker Swarm Nodes. 
 
 # Running the Consumer Script
 
