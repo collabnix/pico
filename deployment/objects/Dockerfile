@@ -2,6 +2,7 @@ FROM ajeetraina/opencv4-python3
 RUN apt update
 RUN mkdir -p /project/
 COPY image_processor.py /project/
+COPY image_processor.json /project/
 COPY consumer.py /project/
 COPY pico-consumer.sh /project/
 WORKDIR /project/
