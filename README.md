@@ -73,10 +73,10 @@ cd pico/kafka
 ```
 
 ```
-docker-compose up -d
+docker stack deploy -c docker-compose.yml mykafka
 ```
 
-That's it. Your AWS KAfka cluster is up and running on a single node. For running Apache Kafka on Swarm Mode, refer [this link](https://github.com/collabnix/pico/blob/master/kafka/README.md)
+That's it. Your AWS KAfka cluster is up and running on Docker Swarm Nodes. For running Apache Kafka on Swarm Mode, refer [this link](https://github.com/collabnix/pico/blob/master/kafka/README.md)
 
 # Running the Consumer Script
 
