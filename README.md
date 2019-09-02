@@ -101,7 +101,7 @@ Just place any object in front of camera module and it shall detect the object a
 
 ## Governance
 
-This project was incubated by Ajeet Singh Raina[Docker Captain & Docker Community Leader](https://www.docker.com/captains/ajeet-singh-raina) & Avinash Bendigeri(Data Science Engineer)
+This project was incubated by Ajeet Singh Raina [Docker Captain & Docker Community Leader](https://www.docker.com/captains/ajeet-singh-raina) & Avinash Bendigeri(Data Science Engineer)
 
 ## Getting Started - The Hard Way
 
