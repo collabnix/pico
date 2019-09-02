@@ -1,6 +1,6 @@
 # The Pico Project
 
-Object Detection & Text Analytics Made Simple using Pico
+Object Detection & Text Analytics Made Simple using Docker, Apache Kafka, IoT & Amazon Rekognition System
 
 ![alt text](https://github.com/collabnix/pico/blob/master/images/thepicoproject1.png "My Image")
 
@@ -99,7 +99,9 @@ image_processor > consumer script > producer script
 
 Just place any object in front of camera module and it shall detect the object automatically with tagging about the object type.
 
+## Governance
 
+This project was incubated by Ajeet Singh Raina[Docker Captain & Docker Community Leader](https://www.docker.com/captains/ajeet-singh-raina) & Avinash Bendigeri(Data Science Engineer)
 
 ## Getting Started - The Hard Way
 
