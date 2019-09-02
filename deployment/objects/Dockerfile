@@ -5,6 +5,7 @@ COPY image_processor.py /project/
 COPY image_processor.json /project/
 COPY consumer.py /project/
 COPY pico-consumer.sh /project/
+COPY templates /project/
 WORKDIR /project/
 RUN pip3 install pytz boto3 pillow
 CMD ["pico-consumer.sh"]
