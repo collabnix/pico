@@ -80,26 +80,14 @@ That's it. Your AWS KAfka cluster is up and running on Docker Swarm Nodes.
 
 # Running the Consumer Script
 
-To run the consumer script, we need to focus on two files: consumer.py and image_processor.py
+To run the consumer script, we need to focus on two files: 
+- consumer.py and 
+- image_processor.py
+
 Under the image_processor.py you need to add ACCESS KEY details of your AWS account and under consumer.py you need to add your correct kafka cluster IP.
 
 
-## Running Image Processor Script(Run on any AWS instance)
-
-
-```
-sudo docker run -it --privileged --device /dev/video0:/dev/video0 ajeetraina/pico-producer-rpi python3 consumer_camera.py
-```
-
-## Execute the Consumer Script
-
-```
-nohup python3 image_processor.py
-nohup python3 consumer.py
-```
-
-Sequence of the script should be:
-image_processor > consumer script > producer script
+Here you go..
 
 Just place any object in front of camera module and it shall detect the object automatically with tagging about the object type.
 
