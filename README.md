@@ -80,6 +80,10 @@ That's it. Your AWS KAfka cluster is up and running on Docker Swarm Nodes.
 
 # Running the Consumer Script
 
+To run the consumer script, we need to focus on two files: consumer.py and image_processor.py
+Under the image_processor.py you need to add ACCESS KEY details of your AWS account and under consumer.py you need to add your correct kafka cluster IP.
+
+
 ## Running Image Processor Script(Run on any AWS instance)
 
 
