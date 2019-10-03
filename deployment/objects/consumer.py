@@ -14,7 +14,7 @@ import base64
 camera_topic_1 = "camera1"
 camera_topic_2 = "camera2"
 camera_topic_3 = "camera3"
-brokers = ["35.189.130.4:9092"]
+brokers = ["35.221.213.182:9092"]
 
 camera1 = KafkaConsumer(
     camera_topic_1, 
