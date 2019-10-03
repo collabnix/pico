@@ -35,7 +35,7 @@ import io
 
 # Fire up the Kafka Consumer
 topic = "image-pool"
-brokers = ["35.221.215.135:9092"]
+brokers = ["35.221.213.182:9092"]
 
 consumer = KafkaConsumer(
     topic, 
@@ -147,12 +147,12 @@ def start_processor():
 
                             )
 
-                    font = ImageFont.truetype("arial.ttf", 25)
+                   #  font = ImageFont.truetype("arial.ttf", 25)
                     draw.line(points, fill='#00d400', width=3)
 
                     label = str(objects[i])+":"+str(confidence[i])
                     color = 'rgb(255,255,0)' # white color
-                    draw.text((left, top - 25), label, fill=color,font=font)
+                    draw.text((left, top - 25), label, fill=color)
 
 
                     imgByteArr = io.BytesIO()
