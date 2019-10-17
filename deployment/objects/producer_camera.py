@@ -21,7 +21,7 @@ from kafka.errors import KafkaError
 import base64
 
 topic = "image-pool"
-brokers = ["35.221.215.135:9092"]
+brokers = ["35.221.213.182:9092"]
 
 camera_data = {'camera_id':'1',
                'position':'frontspace',
