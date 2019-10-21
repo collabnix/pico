@@ -12,4 +12,4 @@
 - Then run the Consumer.py Script on AWS Instance
 - Finally, run the Producer_camera.py script on Pi
 
-Place an object in front of camera module and watch out for both text as well as object detection under http://<broker-ip>:5000
+Place an object in front of camera module and watch out for both text as well as object detection under http://broker-ip:5000
