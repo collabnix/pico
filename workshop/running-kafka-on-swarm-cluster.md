@@ -1,5 +1,9 @@
 # Running Apache Kafka on 2-Node Docker Swarm Cluster
 
+Apache Kafka is an open-source stream-processing software platform developed by LinkedIn and donated to the Apache Software Foundation. It is written in Scala and Java. The project aims to provide a unified, high-throughput, low-latency platform for handling real-time data feeds.
+
+Apache Kafka is a distributed, partitioned, and replicated publish-subscribe messaging system that is used to send high volumes of data, in the form of messages, from one point to another. It replicates these messages across a cluster of servers in order to prevent data loss and allows both online and offline message consumption. This in turn shows the fault-tolerant behaviour of Kafka in the presence of machine failures that also supports low latency message delivery. In a broader sense, Kafka is considered as a unified platform which guarantees zero data loss and handles real-time data feeds.
+
 ## Cloning the Repository
 
 ```
