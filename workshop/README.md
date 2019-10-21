@@ -20,7 +20,7 @@
 
 ## Testing Object Detection
 
-- [Performing Object Detection]()
+- [Performing Object Detection](https://github.com/collabnix/pico/blob/master/workshop/performing-object-detection.md)
 
 
 
