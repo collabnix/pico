@@ -9,7 +9,6 @@
 
 ## Apache Kafka on AWS Cloud
 
-- [Getting AWS Account]()
 - [Setting up 2-Node Docker Swarm Cluster on AWS Cloud]()
 - [Building Apache Kafka on 2-Node Docker Swarm Cluster]()
 
