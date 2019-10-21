@@ -52,3 +52,4 @@ BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
 root@raspberrypi:~#
 ```
 
+[Next >> Installing Docker on Raspberry Pi ](https://github.com/collabnix/pico/blob/master/workshop/installing-docker.md)
