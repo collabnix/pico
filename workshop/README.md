@@ -9,7 +9,7 @@
 
 ## Apache Kafka on AWS Cloud
 
-- [Setting up 2-Node Docker Swarm Cluster on AWS Cloud]()
+- [Setting up 2-Node Docker Swarm Cluster on AWS Cloud](https://github.com/collabnix/pico/blob/master/workshop/setting-up-2-node-kafka-on-aws.md)
 - [Building Apache Kafka on 2-Node Docker Swarm Cluster]()
 
 
