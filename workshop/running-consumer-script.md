@@ -32,7 +32,10 @@ You will need 2 scripts - Image Processor and Consumer
 cd pico/deployment/objects/
 ```
 
-## Execute Image processor Script placed under https://github.com/collabnix/pico/blob/master/deployment/objects/image_processor.py
+## Execute Image processor Script 
+
+This script is placed under https://github.com/collabnix/pico/blob/master/deployment/objects/image_processor.py location.
+Before you run this script, ensure that it has right AWS Access Key and Broker IP address
 
 ```
 python3 image_processor.py
@@ -45,6 +48,9 @@ docker exec -it <container-id> bash
 ```
 
 ## Exexute Consumer Script
+
+This script is placed under https://github.com/collabnix/pico/blob/master/deployment/objects/ directory.
+Before you run this script, ensure that it has right Broker IP address
 
 ```
 python3 consumer.py
