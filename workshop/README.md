@@ -18,6 +18,11 @@
 - [Running Consumer Scripts on AWS Cloud Instance](https://github.com/collabnix/pico/blob/master/workshop/running-consumer-script.md)
 - [Running Producer Script on Raspberry Pi](https://github.com/collabnix/pico/blob/master/workshop/running-producer-script-on-pi.md)
 
+## Testing Object Detection
+
+- [Performing Object Detection]()
+
+
 
 
 
