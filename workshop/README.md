@@ -1,5 +1,7 @@
 # Workshop on Pico - Object Detection & Analytics using Docker, Raspberry Pi, Apache Kafka & AWS Rekognition Service
 
+![Image](https://github.com/collabnix/pico/blob/master/workshop/images/pico123.png)
+
 ## Docker on Raspberry Pi
 
 - [Preparing Your Raspberry Pi](https://github.com/collabnix/pico/blob/master/workshop/preparing-raspberrypi.md)
