@@ -15,8 +15,8 @@
 
 ## Setting up Pico 
 
-- [Running Producer Script on Raspberry Pi]()
 - [Running Consumer Scripts on AWS Cloud Instance]()
+- [Running Producer Script on Raspberry Pi]()
 
 
 
