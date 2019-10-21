@@ -16,7 +16,7 @@
 ## Setting up Pico 
 
 - [Running Consumer Scripts on AWS Cloud Instance]()
-- [Running Producer Script on Raspberry Pi]()
+- [Running Producer Script on Raspberry Pi](https://github.com/collabnix/pico/blob/master/workshop/running-producer-script-on-pi.md)
 
 
 
