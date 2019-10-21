@@ -4,7 +4,7 @@
 
 - [Preparing Your Raspberry Pi](https://github.com/collabnix/pico/blob/master/workshop/preparing-raspberrypi.md)
 - [Installing Docker on Raspberry Pi](https://github.com/collabnix/pico/blob/master/workshop/installing-docker.md)
-- [Turn Your Raspberry Pi into CCTV Camera using Docker container]()
+- [Turn Your Raspberry Pi into CCTV Camera using Docker container](https://github.com/collabnix/pico/blob/master/workshop/turn-your-raspberrypi-into-camera.md)
 
 
 ## Apache Kafka on AWS Cloud
