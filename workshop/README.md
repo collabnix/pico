@@ -1,4 +1,4 @@
-# Pico Workshop
+# Workshop on Pico - Object Detection & Analytics using Docker, Raspberry Pi, Apache Kafka & AWS Rekognition Service
 
 ## Docker on Raspberry Pi
 
