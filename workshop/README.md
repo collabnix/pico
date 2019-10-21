@@ -3,7 +3,7 @@
 ## Docker on Raspberry Pi
 
 - [Preparing Your Raspberry Pi]()
-- [Installing Docker on Raspberry Pi]()
+- [Installing Docker on Raspberry Pi](https://github.com/collabnix/pico/blob/master/workshop/installing-docker.md)
 - [Turn Your Raspberry Pi into CCTV Camera using Docker container]()
 
 
