@@ -11,8 +11,19 @@
 - Clients use a handshake to form a connection with an RTMP server which then allows users to stream video and audio.
 - RTMP live streaming generally requires a media server and a content delivery network, but by leveraging StackPath EdgeCompute you can remove the need for a CDN and drastically reduce latency and costs.
 
+## Setup:
 
-## How to run RTMP inside Docker Container
+- Attach Raspberry Pi with Camera Module
+- Turn Your Raspberry Pi into CCTV Camera
+- Run RTMP + Nginx inside Docker container on Jetson Nano
+- Run Yolo inside Docker container on Jetson Nano
+
+## Turn Your Raspberry Pi into CCTV Camera
+
+Refer [this](http://collabnix.com/turn-your-raspberry-pi-into-low-cost-cctv-surveillance-camerawith-night-vision-in-5-minutes-using-docker/) link
+
+
+## How to run RTMP inside Docker Container on Jetson Nano
 
 ```
 docker run -d -p 1935:1935 --name nginx-rtmp ajeetraina/nginx-rtmp-arm:latest
