@@ -19,8 +19,8 @@ docker run -d -p 1935:1935 --name nginx-rtmp ajeetraina/nginx-rtmp-arm:latest
 If you want to build the Docker Image from Dockerfile, follow the below steps:
 
 ```
-git clone https://github.com/collabnix/nginx-rtmp-docker
-cd nginx-rtmp-docker/
+git clone https://github.com/collabnix/pico
+cd pico/rtmp/
 docker build -t ajeetraina/nginx-rtmp-arm .
 ```
 
