@@ -7,7 +7,7 @@
 - RTMP also defines several virtual channels that work independently of each other for packets to be delivered on. 
 - This means that video and audio are delivered on separate channels simultaneously.
 - Clients use a handshake to form a connection with an RTMP server which then allows users to stream video and audio.
-- TMP live streaming generally requires a media server and a content delivery network, but by leveraging StackPath EdgeCompute you can remove the need for a CDN and drastically reduce latency and costs.
+- RTMP live streaming generally requires a media server and a content delivery network, but by leveraging StackPath EdgeCompute you can remove the need for a CDN and drastically reduce latency and costs.
 
 
 ## How to run RTMP inside Docker Container
