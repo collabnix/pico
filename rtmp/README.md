@@ -39,6 +39,10 @@ docker build -t ajeetraina/nginx-rtmp-arm .
 
 ## Testing RTMP with OBS Studio and VLC
 
+This can be tested either on your laptop or Raspberry Pi(omxplayer).
+
+Follow the below steps in case you have Windows Laptop with OBS Studo and VLC installed.
+
 - Open OBS Studio
 - Click the "Settings" button
 - Go to the "Stream" section
@@ -54,3 +58,5 @@ docker build -t ajeetraina/nginx-rtmp-arm .
 - Enter the URL from above as rtmp://<ip_of_host>/live/<key> replacing <ip_of_host> with the IP of the host in which the container is running and <key> with the key you created in OBS Studio. For example: rtmp://192.168.0.30/live/test
 - Click "Play"
 - Now VLC should start playing whatever you are transmitting from OBS Studio
+  
+
