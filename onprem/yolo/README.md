@@ -35,10 +35,12 @@ ls /dev/video*
 
 Output should be: /dev/video0
 
-# Running the container
+# Running the scripts
 
 ```
-docker run -d --rm --name yolo_service -p 8080:8080 --gpus all johannestang/yolo_service:1.0_cuda10.0-yolov3_coco 
+wget -N https://raw.githubusercontent.com/opendatacam/opendatacam/v2.1.0/docker/install-opendatacam.sh
+chmod 777 install-opendatacam.sh
+./install-opendatacam.sh --platform nano
 ```
 
 ```
